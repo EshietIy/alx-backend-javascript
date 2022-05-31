@@ -1,4 +1,9 @@
 const fs = require('fs');
+
+/**
+*count student in csv
+*/
+
 const countStudents = (dPath) => {
   if (!fs.existsSync(dPath)) {
     throw new Error('Cannot load the database');
@@ -15,7 +20,7 @@ const countStudents = (dPath) => {
   const dbNames = csvLines[0].split(',');
   const propNames = dbNames.slice(0, dbNames.length - 1);
 
-  for (const line of fileLines.slice(1)) {
+  for (const line of csvLines.slice(1)) {
     const studentRec = line.split(',');
     const studentPropValues = studentRec.slice(0, studentRec.length - 1);
     const field = studentRec[studentRec.length - 1];
