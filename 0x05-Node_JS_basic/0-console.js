@@ -2,6 +2,7 @@
 * Dispaly parameter to stdout
 */
 const displayMessage;
-export.displayMessage = (msg) => {
+displayMessage = (msg) => {
   console.log(msg);
 };
+module.export = displayMaesage;
